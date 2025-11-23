@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOCUMENT.GETELEMENT.ID PRACTICE</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <hr class="m-5" />
+<pre class=" border p-2 m-5 rounded-xl bg-green-100 border-green-600">    JS Activity: document.getElementById() (Beginner)
+
+Objective: Learn how to select and manipulate elements using document.getElementById().
+
+Instructions:
+
+Create a simple HTML page with:
+
+h1 : Hello World
+BTN : Change Title
+
+Write JavaScript that:
+
+Selects the <h1> using document.getElementById().
+
+Selects the <button> using document.getElementById().
+
+When the button is clicked, the <h1> text changes to "Title Changed!".
+
+Add comments explaining each step.</pre>
+
+
+    <div class="flex justify-center items-center flex-col gap-2">
+
+      <!-- initial value -->
+      <h1 id="myTitle" class="text-2xl font-bold">Hello World</h1>
+
+      <!-- when btn click change text content -->
+       <!-- used inline js  -->
+      <button
+        id="myButton"
+        onclick="document.getElementById(`myTitle`).innerHTML = `Title Changed!`"
+        class="border p-2 rounded-xl"
+      >
+        Change Title
+      </button>
+
+
+<pre class=" border p-2 m-5 rounded-xl bg-red-100 border-red-600">    JS Activity: document.getElementById() (Beginner)
+
+Objective: Learn how to select and manipulate elements using document.getElementById().
+
+Instructions:
+
+Create a simple HTML page with:
+
+h1 : Hello World
+BTN : Change Title
+
+Write JavaScript that:
+
+Selects the <h1> using document.getElementById().
+
+Selects the <button> using document.getElementById().
+
+When the button is clicked, the <h1> text changes to "Title Changed!".
+
+Add comments explaining each step.</pre>
+    </div>
+    <hr class="m-5" />
+    <script src="app.js"></script>
+  </body>
+</html>
