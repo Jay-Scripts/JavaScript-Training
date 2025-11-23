@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"JS Strings Activity"</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <hr class="m-5" />
+<pre class=" border p-2 m-5 rounded-xl bg-green-100 border-green-600">    
+Activity #4 — Strings (Concatenation & Template Literals)
+Objective:
+
+Learn to build messages using strings.
+
+📌 Instructions:
+
+Create an HTML page with:
+
+A title: "JS Strings Activity"
+
+A <p> with ID: output
+
+A button to trigger your JS
+
+📌 JavaScript Requirements:
+
+Inside your JS:
+
+Create variables:
+
+let firstName = "Maria";
+let lastName = "Santos";
+let hobby = "painting";
+
+
+When the button is clicked:
+
+Combine them using:
+
+Concatenation → "Hello " + firstName + " " + lastName
+
+Template literal → I love ${hobby}!
+
+Display EXACTLY this inside the <p>:
+
+Hello Maria Santos!
+I love painting!
+
+
+Use document.getElementById()
+
+Add comments explaining each step.</pre>
+
+
+    <div class="flex justify-center items-center flex-col gap-2">
+<p id="output">Click the button</p>
+<button id="submit" class="p-2 border rounded-xl bg-green-200 hover:bg-green-400 hover:scale-110 transition transition-150 hover:text-white">Submit</button>
+
+    </div>
+
+
+<pre class=" border p-2 m-5 rounded-xl bg-red-100 border-red-600">  Activity #4 — JS Strings
+
+Grading: 100% ✅ Excellent!
+
+What you did well:
+
+✅ Variables correctly declared (let firstName, lastName, hobby).
+
+✅ Event handler added in external JS instead of inline — clean and professional.
+
+✅ Correct use of concatenation (+) and template literals (${}) together.
+
+✅ Output displays exactly as required:
+
+Hello Cornelio Gatbonton ! 
+I Love Coding !
+
+
+✅ Code is readable and maintainable.
+
+Minor suggestions:
+
+You could remove the extra let submit = assignment since you’re not using the variable submit anywhere else. Simply doing:
+
+document.getElementById("submit").onclick = function() { ... }
+
+
+is enough.</pre>
+    <hr class="m-5" />
+    <script src="app.js"></script>
+  </body>
+</html>
