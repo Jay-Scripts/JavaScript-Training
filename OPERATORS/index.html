@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"JS Operators Activity"</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <hr class="m-5" />
+<pre class=" border p-2 m-5 rounded-xl bg-green-100 border-green-600">    Activity #3 — JavaScript OPERATORS
+Objective:
+
+Practice using the basic math operators: +, -, *, /.
+
+📌 Instructions:
+
+Create an HTML page with:
+
+A title: "JS Operators Activity"
+
+A paragraph with ID: result
+
+A button with ID: calcBtn
+
+📌 JavaScript Requirements:
+
+Inside your JS:
+
+Create 2 number variables:
+
+let num1 = 10;
+let num2 = 5;
+
+
+When the button is clicked:
+
+Use +, -, *, / to compute:
+
+sum
+
+difference
+
+product
+
+quotient
+
+Display EXACTLY this inside the paragraph:
+
+Sum: 15
+Difference: 5
+Product: 50
+Quotient: 2
+
+
+Use document.getElementById()
+
+Add comments explaining each line.</pre>
+
+
+    <div class="flex justify-center items-center flex-col gap-2">
+      <p id="num1">12</p>
+      <p id="num2">2</p>
+      <hr class="m-2">
+<p id="result"></p>
+
+<button onclick="calculate()" id="calcBtn" class="border p-4 rounded-xl bg-green-200 hover:bg-green-400 hover:scale-110 transition transition-150 hover:text-white">Calculate</button>
+
+    </div>
+
+
+<pre class=" border p-2 m-5 rounded-xl bg-red-100 border-red-600">  Grading: 96% / 100 ✅ Excellent!
+
+What You Did Well:
+
+✅ Correctly selected elements using document.getElementById().
+
+✅ Converted innerText to numbers with parseInt() before calculation (perfect!).
+
+✅ Correctly performed all four operations: +, -, *, /.
+
+✅ Displayed the output in the correct format inside the <p>.
+
+✅ Clean, readable code and structured function properly.
+
+✅ Added nice styling (Tailwind hover and transition effects).
+
+✅ Bonus: Displayed the numbers from <p> instead of hardcoding — demonstrates dynamic usage.
+
+Minor Improvement:
+
+⚠ You could have directly used numeric variables in JS instead of reading from <p> elements if this is meant for a beginner “variable” exercise — but using the UI elements is a creative extra.
+
+Overall Feedback:
+Your understanding of variables, DOM selection, functions, and operators is excellent. The output is clear and visually nice.
+
+Next Step Suggestion:
+Try doing the same activity using const for numbers instead of reading them from the HTML, to practice pure JS variable operations.<p></pre>
+    <hr class="m-5" />
+    <script src="app.js"></script>
+  </body>
+</html>
