@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"JS Type Conversion Activity"</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <hr class="m-5" />
+<pre class=" border p-2 m-5 rounded-xl bg-green-100 border-green-600">
+  📘 Activity #6 — JavaScript Type Conversion
+
+Objective:
+Practice converting user input (strings) into numbers using JavaScript type conversion.
+
+📌 Instructions
+
+Create an HTML page with:
+
+Title: "JS Type Conversion Activity"
+
+One input field for a number → ID: userNumber
+
+One button → ID: convertBtn
+
+One<p → ID: result
+
+📌 JavaScript Requirements
+
+Inside your JS:
+
+Get the value using:
+
+document.getElementById("userNumber").value
+
+
+Convert the input (string) to a number using Number() or parseInt()
+
+Store inside:
+
+let convertedValue = ...
+
+
+Display EXACTLY this in the <p>:
+
+Original: 25 (string)
+Converted: 25 (number)
+</pre>
+
+
+    <div class="flex justify-center items-center flex-col gap-2">
+
+      <!-- initial value -->
+      <h2>"JS Type Conversion Activity"</h2>
+<label for="input">Input number then convert choose what convert type</label>
+<input type="text"  name="input" id="input" class="border p-2 rounded-xl">
+<p id="result">Result </p>
+<div class="flex gap-5"><button id="string" class=" border bg-red-200 p-2 rounded-xl">String</button>
+<button id="number" class=" border bg-green-200 p-2 rounded-xl">Number</button>
+<button id="bool" class=" border bg-blue-400 p-2 rounded-xl">Bool</button>
+<button id="float" class=" border bg-yellow-200 p-2 rounded-xl">Float</button></div>
+
+<pre class=" border p-2 m-5 rounded-xl bg-red-100 border-red-600">✅ ✔ What You Did PERFECTLY
+✔ Correct HTML structure
+✔ Correct use of document.getElementById()
+✔ You used String(), Number(), Boolean(), and parseFloat() correctly
+✔ Clean UI and Tailwind styling
+✔ Buttons correctly trigger conversions
+✔ Result displays conversion type
+⚠️ Minor Issues (Where you lost points)
+1️⃣ Typo in your String converter
+
+You wrote:
+
+inpunt = String(input);
+
+
+inpunt is a typo — this line does nothing.
+You meant:
+
+input = String(input);
+
+2️⃣ You showed the converted value correctly… BUT
+
+Your instructions said:
+
+Display EXACTLY this format:
+Original: 25 (string)
+Converted: 25 (number)
+
+
+But your output is:
+
+25 the type of data is now number
+
+
+This is correct, but not the required exact format.</pre>
+    <hr class="m-5" />
+    <script src="app.js"></script>
+  </body>
+</html>

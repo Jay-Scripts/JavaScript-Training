@@ -1,2 +1,3 @@
-let title = document.getElementByID(`title`);
-title.style.color = "red";
+// // fpr changing colors
+
+// let title = document.getElementById(`title`).style.color = "red";
