@@ -3,77 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VARIABLES</title>
+    <title>"JS Variables & Scope Activity"</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     <hr class="m-5" />
-<pre class=" border p-2 m-5 rounded-xl bg-green-100 border-green-600">    JS Activity: Variables (Beginner Level)
+    <pre class="border p-2 m-5 rounded-xl bg-green-100 border-green-600">
+ Activity #7 — JavaScript Variables & Scope (Practice Version)
+
 Objective:
+Learn the differences between let, var, and const and understand their scope (block vs function vs global).
 
-Learn how to declare, store, and use data with JavaScript variables.
-
-📌 Instructions:
+Instructions:
 
 Create a simple HTML page with:
 
-An h2 : that says: "JS Variables Activity"
+A title: "JS Variables & Scope Activity"
 
-A P : that will display a message (give it an ID).
+Three buttons:
 
-A button that will trigger your JS code (give it an ID).
+"Test Let" → ID: btnLet
 
-📌 JavaScript Requirements:
+"Test Var" → ID: btnVar
 
-Inside your JS:
+"Test Const" → ID: btnConst
 
-Create three variables:
+A paragraph where the results will appear → ID: output
 
-let name = "Juan";
+JavaScript tasks:
 
-let age = 20;
+For let:
 
-const country = "Philippines";
+Declare a variable x.
 
-When the button is clicked:
+Try to redeclare x in the same scope (should fail).
 
-Display this exact message inside the <p>:
+Declare x inside a block and display the value.
 
-Hello Juan! You are 20 years old from Philippines.
+For var:
 
+Declare a variable y.
 
-Use document.getElementById() and .innerHTML
-(Just like last activity)
+Redeclare y in the same scope (should succeed).
 
-Add comments explaining each line.</pre>
+Declare y inside a block and display the value.
 
+For const:
+
+Declare a constant z.
+
+Try to reassign z (should fail).
+
+Declare z inside a block and display the value.
+
+Use document.getElementById() to:
+
+Attach click events to buttons
+
+Show results in the paragraph
+
+Add comments explaining each step.
+
+Expected Learning Outcomes:
+
+Understand block vs function/global scope
+
+See which variables can be redeclared or reassigned
+
+Practice using document.getElementById()</pre
+    >
 
     <div class="flex justify-center items-center flex-col gap-2">
+      <h2>"JS Variables & Scope Activity"</h2>
+      <p id="message">
+        Click the Button to see the scope of variables VAR LET & CONST
+      </p>
 
-      <!-- initial value -->
-      <h2>"JS Variables Activity"</h2>
-      <p id="message">Click the Button to see my potential</p>
+      <p class="text-blue-400" id="varText">VAR</p>
+      <p class="text-red-400" id="letText">LET</p>
+      <p class="text-red-400" id="letTextOutsideFnc">LET outside the fnc</p>
+      <p class="text-green-400" id="constText">CONST</p>
 
-      <!-- call the funcion in onclick when the button was click -->
-<button type="button" onclick="displayMessage()" class="border rounded-xl p-4 bg-green-200 hover:bg-green-400 hover:scale-110 hover:text-white transition duration-150 ">Show Message</button>
+      <div class="flex gap-6">
+        <button
+          type="button"
+          id="VAR"
+          class="border rounded-xl p-4 bg-green-200 hover:bg-green-400 hover:scale-110 hover:text-white transition duration-150"
+        >
+          VAR
+        </button>
+      </div>
     </div>
 
+    <pre class="border p-2 m-5 rounded-xl bg-green-100 border-green-600">
+Activity #7 — JavaScript Variables & Scope (Practice Version)
 
-<pre class=" border p-2 m-5 rounded-xl bg-red-100 border-red-600">   🎉 Your Grade: 29 / 30 → 96% (Excellent!)
+✅ What You Did Well:
+- Correct variable declarations (var, let, const)
+- Correct demonstration of scope (block vs global)
+- Correct use of document.getElementById() and event handling
+- Error handling with try/catch for const reassignment
+- Clean and readable code
+- Single button successfully updates DOM to demonstrate variable behavior
 
-Super solid work!
-You clearly understand variables, functions, and getElementById().
-Your output works perfectly and follows the instructions almost exactly.
-
-✅ What You Did PERFECTLY
-
-✔ Correct variable declarations (let, const)
-✔ Correct function name and trigger
-✔ Correct use of document.getElementById()
-✔ Correct .innerHTML formatting
-✔ Clean and readable code
-✔ Added styling (nice extra!)
-✔ Button successfully updates the <p></pre>
+⚠ Minor Improvement:
+- Add more inline comments explaining each step
+- Could separate buttons for LET and CONST to better demonstrate each independently
+</pre
+    >
     <hr class="m-5" />
     <script src="app.js"></script>
   </body>

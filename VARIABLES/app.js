@@ -1,12 +1,20 @@
-// initialized variables
-let name = "Cornelio";
-let age = 25;
-const country = "Philipines";
+var VAR = document.getElementById(`varText`).innerHTML;
+let LET = document.getElementById(`letText`).innerHTML;
+const CONST = document.getElementById(`constText`).innerHTML;
 
-// make a function to get element by ID then pass the variable data in the inner HTML if formatted way
-function displayMessage() {
-  let message = document.getElementById(`message`);
-  // added a bit of design to explore the designing part of js for me to grow more
-  message.innerHTML = `Hello ${name}! You are ${age} years old from the ${country}`;
-  message.style.color = "red";
-}
+document.getElementById(`VAR`).onclick = function () {
+  VAR = "VAR = Success since this can be re-assign and it is a global scope!";
+  LET =
+    "LET = Success since this can be re-assign and it is a block scope!, but when i recall it outside it will return to its initial value declared in the outside ";
+  try {
+    CONST = "CONST = Fail!";
+  } catch (error) {
+    document.getElementById(`constText`).innerHTML = "CONST = Fail!";
+  }
+  document.getElementById(`varText`).innerHTML = VAR;
+  document.getElementById(`letText`).innerHTML = LET;
+};
+
+document.getElementById(
+  `letTextOutsideFnc`
+).innerHTML = `let outside the function ${LET} it was not changed`;
