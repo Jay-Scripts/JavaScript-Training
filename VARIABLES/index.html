@@ -3,51 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>"JS Variables & Scope Activity"</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <h1>DISPLAY 1-10 USING WHILE LOOP</h1>
-    <p id="num"></p>
-    <hr />
-    <h1>DISPLAY EVEN NUM 2-20 USING WHILE LOOP</h1>
-    <p id="even"></p>
-    <hr />
-    <h1>Print numbers from 10 down to 1. USING WHILE LOOP</h1>
-    <p id="countDown"></p>
-    <hr />
-    <h1>Print numbers from 1 to 20, but Skip numbers divisible by 3</h1>
-    <p id="d"></p>
+    <p id="n1">1</p>
+    <p id="n2">3</p>
+    <button id="button">calc</button>
+
+    <p id="total">total :</p>
+
+    <script>
+      document.getElementById(`button`).onclick = function () {
+        let num1 = document.getElementById(`n1`).innerText;
+        let num2 = document.getElementById(`n2`).innerText;
+        num2NUm = parseInt(num2);
+        num1NUm = parseInt(num1);
+        let result = num1NUm + num2NUm;
+        document.getElementById(`total`).innerText = result;
+      };
+    </script>
   </body>
-  <script>
-    // A
-    let num = 1;
-
-    while (num < 11) {
-      document.getElementById(`num`).innerHTML += `, ${num}`;
-
-      num++;
-    }
-    //B
-    let even = 2;
-    while (even <= 20) {
-      document.getElementById(`even`).innerHTML += `, ${even}`;
-      even += 2;
-    }
-    //C
-    let countDown = 10;
-    while (countDown > 1) {
-      document.getElementById(`countDown`).innerHTML += `, ${countDown}`;
-      countDown--;
-    }
-
-    //D
-    let D = 1;
-
-    while (D <= 20) {
-      if (D % 2 === 0) {
-        document.getElementById("d").innerHTML += `${D} `;
-      }
-      D++;
-    }
-  </script>
 </html>
