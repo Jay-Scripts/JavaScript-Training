@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>DISPLAY 1-10 USING WHILE LOOP</h1>
+    <p id="num"></p>
+    <hr />
+    <h1>DISPLAY EVEN NUM 2-20 USING WHILE LOOP</h1>
+    <p id="even"></p>
+    <hr />
+    <h1>Print numbers from 10 down to 1. USING WHILE LOOP</h1>
+    <p id="countDown"></p>
+    <hr />
+    <h1>Print numbers from 1 to 20, but Skip numbers divisible by 3</h1>
+    <p id="d"></p>
+  </body>
+  <script>
+    // A
+    let num = 1;
+
+    while (num < 11) {
+      document.getElementById(`num`).innerHTML += `, ${num}`;
+
+      num++;
+    }
+    //B
+    let even = 2;
+    while (even <= 20) {
+      document.getElementById(`even`).innerHTML += `, ${even}`;
+      even += 2;
+    }
+    //C
+    let countDown = 10;
+    while (countDown > 1) {
+      document.getElementById(`countDown`).innerHTML += `, ${countDown}`;
+      countDown--;
+    }
+
+    //D
+    let D = 1;
+
+    while (D <= 20) {
+      if (D % 3 !== 0) {
+        document.getElementById("d").innerHTML += `${D} `;
+      }
+      D++;
+    }
+  </script>
+</html>
