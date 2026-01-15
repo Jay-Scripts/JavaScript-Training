@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="rest"></p>
+    <p id="rest2"></p>
+    <script>
+      function combineParameters(...array) {
+        return array.join(" ");
+      }
+      let combined = combineParameters(`Cornelio`, `Aposaga`, `Gatbonto`, `Jr`);
+
+      document.getElementById(`rest`).innerText = combined;
+
+      function combineIntoArray(...parameter) {
+        return parameter;
+      }
+
+      let food1 = `Banana`;
+      let food2 = `Lemon`;
+      let food3 = `Apple`;
+      let food4 = `Grapes`;
+      let food5 = `Coconut`;
+
+      let combinedParam = combineIntoArray(food1, food2, food3, food4, food5);
+
+      document.getElementById(`rest2`).innerText = combinedParam;
+    </script>
+  </body>
+</html>
