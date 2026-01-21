@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Part 1: Basics (Object Creation & Access)
+      const user = {
+        id: 909,
+        name: "Cornelio",
+        email: "corneliogatbontonjr21@gmail.com",
+        isActive: true,
+        //Part 2: Methods & this
+        getInfo: function () {
+          return "Name : " + this.name + ", Email : " + this.email;
+        },
+        //Part 5: Nested Objects
+        hobbies: {
+          morning: "workout",
+          afternoon: "mobile games",
+          evening: "Coding",
+        },
+      };
+      //Print:
+      user.isActive = false;
+      console.log(
+        "Name: " +
+          user.name +
+          ", Email: " +
+          user.email +
+          " Is he active ? " +
+          user.isActive,
+      );
+      //Part 2: Methods & this
+      console.log(user.getInfo());
+
+      //Part 3: Object Destructuring
+      let { id, name, email, isActive } = user;
+      let user2 = { ...user };
+      console.log(id, name, email, isActive);
+      console.log(user2);
+
+      //Part 5: Nested Objects
+      console.log(user.hobbies);
+    </script>
+  </body>
+</html>
