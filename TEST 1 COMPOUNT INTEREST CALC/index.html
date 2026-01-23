@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black/10 place-items-center grid h-screen">
+    <div
+      class="border border-black flex flex-col p-6 bg-white/70 h-[50vh] rounded-xl shadow-xl justify-between"
+    >
+      <label for="prinAmount">Principal Amount :</label>
+      <input type="number" name="prinAmount" id="prinAmount" />
+      <label for="intRate">Interest Rate : </label>
+      <input type="number" name="intRate" id="intRate" />
+      <label for="years">Years</label>
+      <input type="number" name="years" id="years" />
+      <button id="submit" class="p-2 bg-green-500 text-white rounded-xl">
+        Submit
+      </button>
+    </div>
+
+    <div class="border border-black p-2" id="result">Result</div>
+
+    <script>
+      submit.onclick = () => {
+        let prinAmount = Number(document.getElementById(`prinAmount`).value);
+        let intRate = Number(document.getElementById(`intRate`).value) / 100;
+        let years = Number(document.getElementById(`years`).value);
+        let submit = document.getElementById(`submit`);
+        let result = prinAmount * intRate * years;
+        document.getElementById("result").innerText =
+          `Interest rate is = ${result} `;
+      };
+    </script>
+  </body>
+</html>
