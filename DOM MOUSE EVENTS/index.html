@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="grid place-items-center h-screen">
+    <div
+      class="border h-70 w-70 grid place-items-center rounded-xl bg-red-400 text-white text-2xl"
+      id="box"
+    >
+      Mouse Out
+    </div>
+
+    <script>
+      let box = document.getElementById("box");
+
+      box.addEventListener("mouseover", () => {
+        box.style.backgroundColor = "green";
+        box.textContent = "Mouse In😁";
+      });
+
+      box.addEventListener("mouseout", () => {
+        box.style.backgroundColor = "red";
+        box.textContent = "Mouse Out😒";
+      });
+
+      box.addEventListener("click", () => {
+        box.style.backgroundColor = "blue";
+        box.textContent = "Mouse click 🥶";
+      });
+
+      box.addEventListener("dblclick", () => {
+        box.style.backgroundColor = "black";
+        box.textContent = "Mouse double click 😖";
+      });
+    </script>
+  </body>
+</html>
