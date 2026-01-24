@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="id">id</p>
+    <p class="class">class1</p>
+    <p class="class">class1</p>
+    <p class="class">class2</p>
+    <p class="qurrySel">Quer1</p>
+    <p class="qurrySel">Quer2</p>
+    <script>
+      document.title = " POTAA";
+
+      document.getElementById("id").style.backgroundColor = "blue";
+
+      let getElements = document.getElementsByClassName("class");
+      getElements[1].style.backgroundColor = "yellow";
+      document.getElementsByTagName("p")[0].style.fontWeight = "bold";
+
+      document.querySelectorAll("class").style.backgroundColor = "red";
+    </script>
+  </body>
+</html>
