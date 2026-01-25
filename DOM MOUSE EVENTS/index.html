@@ -3,38 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mouse Events Demo</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="grid place-items-center h-screen">
     <div
-      class="border h-70 w-70 grid place-items-center rounded-xl bg-red-400 text-white text-2xl"
       id="box"
+      tabindex="0"
+      class="border h-[280px] w-[280px] grid place-items-center rounded-xl bg-red-400 text-white text-2xl select-none cursor-pointer"
     >
       Mouse Out
     </div>
 
     <script>
-      let box = document.getElementById("box");
+      const box = document.getElementById("box");
 
       box.addEventListener("mouseover", () => {
         box.style.backgroundColor = "green";
-        box.textContent = "Mouse In😁";
+        box.textContent = "Mouse In 😁";
       });
 
       box.addEventListener("mouseout", () => {
         box.style.backgroundColor = "red";
-        box.textContent = "Mouse Out😒";
+        box.textContent = "Mouse Out 😒";
       });
 
       box.addEventListener("click", () => {
         box.style.backgroundColor = "blue";
-        box.textContent = "Mouse click 🥶";
+        box.textContent = "Mouse Click 🥶";
       });
 
       box.addEventListener("dblclick", () => {
         box.style.backgroundColor = "black";
-        box.textContent = "Mouse double click 😖";
+        box.textContent = "Double Click 😖";
+      });
+      document.addEventListener("keydown", (event) => {
+        box.style.backgroundColor = "violet";
+        box.textContent = `Keydown: ${event.key} 🫨👇`;
+
+        if (event.key === "ArrowLeft") {
+          box.style.backgroundColor = "tomato";
+          box.textContent = "Arrow Left 🫨👈";
+        }
+
+        if (event.key === "ArrowRight") {
+          box.style.backgroundColor = "gray";
+          box.textContent = "Arrow Right 🫨👉";
+        }
+      });
+
+      document.addEventListener("keyup", () => {
+        box.style.backgroundColor = "yellowgreen";
+        box.textContent = "Keyup Pressed 🫨☝️";
       });
     </script>
   </body>
