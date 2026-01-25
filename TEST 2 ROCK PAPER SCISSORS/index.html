@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="grid place-items-center h-screen bg-slate-100">
+    <div
+      id="box"
+      tabindex="0"
+      class="border h-[320px] w-[320px] flex flex-col items-center justify-between p-4 rounded-xl bg-blue-200 text-xl select-none"
+    >
+      <h2 class="font-bold">Rock • Paper • Scissors</h2>
+
+      <div class="flex gap-4">
+        <button
+          class="border p-3 rounded-xl bg-black/40 text-3xl"
+          data-choice="rock"
+        >
+          👊
+        </button>
+        <button
+          class="border p-3 rounded-xl bg-black/40 text-3xl"
+          data-choice="paper"
+        >
+          ✋
+        </button>
+        <button
+          class="border p-3 rounded-xl bg-black/40 text-3xl"
+          data-choice="scissors"
+        >
+          ✌️
+        </button>
+      </div>
+
+      <div id="result" class="font-semibold text-center">Choose your move!</div>
+
+      <div class="text-sm text-gray-700">Keyboard: R / P / S</div>
+    </div>
+
+    <script>
+      const box = document.getElementById("box");
+      const result = document.getElementById("result");
+      const buttons = document.querySelectorAll("button");
+
+      const choices = ["rock", "paper", "scissors"];
+
+      function computerPick() {
+        return choices[Math.floor(Math.random() * choices.length)];
+      }
+
+      function play(player) {
+        const computer = computerPick();
+
+        if (player === computer) {
+          box.style.backgroundColor = "#93c5fd";
+          result.textContent = `Draw 🤝 (${player} vs ${computer})`;
+          return;
+        }
+
+        const win =
+          (player === "rock" && computer === "scissors") ||
+          (player === "paper" && computer === "rock") ||
+          (player === "scissors" && computer === "paper");
+
+        if (win) {
+          box.style.backgroundColor = "#86efac";
+          result.textContent = `You Win 🎉 (${player} beats ${computer})`;
+        } else {
+          box.style.backgroundColor = "#fca5a5";
+          result.textContent = `You Lose 💀 (${computer} beats ${player})`;
+        }
+      }
+
+      // Mouse clicks
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          play(btn.dataset.choice);
+        });
+      });
+
+      // Keyboard support
+      document.addEventListener("keydown", (e) => {
+        if (e.key.toLowerCase() === "r") play("rock");
+        if (e.key.toLowerCase() === "p") play("paper");
+        if (e.key.toLowerCase() === "s") play("scissors");
+      });
+    </script>
+  </body>
+</html>
