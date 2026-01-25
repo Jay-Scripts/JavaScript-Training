@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Promise Example</title>
+  </head>
+  <body>
+    <script>
+      function studHTML() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("I do the structure (HTML)");
+          }, 1000);
+        });
+      }
+
+      function studCSS() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("I do the design (CSS)");
+          }, 1000);
+        });
+      }
+
+      function studJS() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("I do the interactive parts (JS)");
+          }, 1000);
+        });
+      }
+
+      studHTML()
+        .then((result) => {
+          console.log(result);
+          return studCSS();
+        })
+        .then((result) => {
+          console.log(result);
+          return studJS();
+        })
+        .then((result) => {
+          console.log(result);
+          console.log("Website finished 😎");
+        })
+        .catch((error) => {
+          console.log("May error ❌", error);
+        });
+    </script>
+  </body>
+</html>
