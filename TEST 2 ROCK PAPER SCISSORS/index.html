@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      .confetti {
+        position: fixed;
+        top: -10px;
+        width: 10px;
+        height: 10px;
+        opacity: 0.9;
+        animation: fall 2.5s linear forwards;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
 
-  <body class="grid place-items-center h-screen bg-slate-100">
+  <body class="grid place-items-center h-screen bg-slate-100 overflow-hidden">
     <div
       id="box"
       tabindex="0"
@@ -47,9 +65,24 @@
       const buttons = document.querySelectorAll("button");
 
       const choices = ["rock", "paper", "scissors"];
+      const colors = ["#f87171", "#facc15", "#4ade80", "#60a5fa", "#c084fc"];
 
       function computerPick() {
         return choices[Math.floor(Math.random() * choices.length)];
+      }
+
+      function launchConfetti() {
+        for (let i = 0; i < 80; i++) {
+          const confetti = document.createElement("span");
+          confetti.classList.add("confetti");
+          confetti.style.left = Math.random() * 100 + "vw";
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.animationDuration = 2 + Math.random() * 2 + "s";
+          document.body.appendChild(confetti);
+
+          setTimeout(() => confetti.remove(), 4000);
+        }
       }
 
       function play(player) {
@@ -69,20 +102,19 @@
         if (win) {
           box.style.backgroundColor = "#86efac";
           result.textContent = `You Win 🎉 (${player} beats ${computer})`;
+          launchConfetti(); // 🎊 HERE
         } else {
           box.style.backgroundColor = "#fca5a5";
           result.textContent = `You Lose 💀 (${computer} beats ${player})`;
         }
       }
 
-      // Mouse clicks
       buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
           play(btn.dataset.choice);
         });
       });
 
-      // Keyboard support
       document.addEventListener("keydown", (e) => {
         if (e.key.toLowerCase() === "r") play("rock");
         if (e.key.toLowerCase() === "p") play("paper");
