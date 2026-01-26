@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let doTask = async () => {
+        let day = "Weekday";
+        try {
+          let morningTask = new Promise((resolve, reject) => {
+            if (day === "Weekday") {
+              resolve("Make a Coffe");
+            } else {
+              reject("No Coffee Bean 🥹");
+            }
+          });
+          let result = await morningTask;
+          console.log(result);
+        } catch (error) {
+          console.error("Task Failed " + error);
+        }
+      };
+
+      doTask();
+    </script>
+  </body>
+</html>
