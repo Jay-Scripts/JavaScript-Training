@@ -6,7 +6,7 @@ import HooksUseState from "./HooksUseState";
 function App() {
   return (
     <>
-      <div className="grid place-content-center mt-5">
+      <div>
         <HooksUseState />
       </div>
     </>
