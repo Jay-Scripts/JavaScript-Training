@@ -4,16 +4,19 @@ const HooksUseState = () => {
   const [number, setNumber] = useState(0);
   const [text, setName] = useState("");
   const addNum = () => {
-    return setNumber(number + 1);
+    // THIS IS UPDATER FUNCTION
+    setNumber((n) => n + 1);
+    setNumber((n) => n + 1);
   };
 
   const minusNum = () => {
-    return setNumber(number - 1);
+    setNumber(number - 1);
   };
 
   const ChangeText = (event) => {
     setName(event.target.value);
   };
+
   return (
     <>
       <h1 className="text-center bg-green-400 text-white p-5 rounded-sm  m-5">
